@@ -1,0 +1,63 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+section {
+    padding: 1rem 20px;
+}
+
+.profile-pic {
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#class-reason {
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li::before {
+    content: '✓';
+    margin-right: 8px;
+    color: #4CAF50;
+}
+
+ul li a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .profile-pic {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+}
