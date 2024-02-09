@@ -54,6 +54,18 @@ ul li a:hover {
     text-decoration: underline;
 }
 
+/* Button Styles */
+#animate-btn {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
     .profile-pic {
         float: none;
