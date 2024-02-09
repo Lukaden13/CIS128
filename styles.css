@@ -1,37 +1,65 @@
-
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
+    background: #f4f4f4; /* Light grey background for the body */
 }
 
 header {
     background: #4CAF50;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    position: relative; /* For button positioning */
+}
+
+#animate-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #4CAF50;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#animate-btn:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    border-color: #4CAF50;
 }
 
 section {
-    padding: 1rem 20px;
+    padding: 2rem 20px;
+    background: #fff; /* White background for content sections */
+    margin: 1rem 0;
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
 .profile-pic {
     float: left;
-    margin-right: 20px;
+    margin: 0 20px 20px 0;
     width: 150px;
     height: auto;
     border-radius: 50%;
+    border: 3px solid #ddd; /* Light grey border for the image */
 }
 
-#class-reason {
-    clear: both;
+#about-me {
+    overflow: hidden; /* Clear the float */
 }
 
 h2 {
-    text-align: center;
+    color: #333;
+    margin-top: 0;
 }
 
 ul {
@@ -54,22 +82,18 @@ ul li a:hover {
     text-decoration: underline;
 }
 
-/* Button Styles */
-#animate-btn {
-    display: block;
-    margin: 1rem auto;
-    padding: 0.5rem 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 @media screen and (max-width: 600px) {
     .profile-pic {
         float: none;
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 20px auto;
+    }
+    
+    #animate-btn {
+        position: static;
+        display: block;
+        width: auto;
+        margin: 20px auto;
+        transform: none;
     }
 }
