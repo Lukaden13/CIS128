@@ -10,6 +10,7 @@
 <body>
     <header>
         <h1>CIS-128 Mobile Web App Development</h1>
+        <button id="animate-btn">Start Animation</button> <!-- Added button -->
     </header>
 
     <section id="about-me">
@@ -37,5 +38,27 @@
             <li><a href="https://stackoverflow.com" target="_blank" rel="noopener noreferrer">Stack Overflow</a> - A Q&A platform for developers to learn and share knowledge.</li>
         </ul>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#animate-btn').click(function() {
+                // Animate the heading font size
+                $('header h1').animate({ fontSize: '+=10px' }, 500).animate({ fontSize: '-=10px' }, 500);
+
+                // Change the heading color and then back
+                $('header h1').css('color', '#ff0000');
+                setTimeout(function() {
+                    $('header h1').css('color', '');
+                }, 1000);
+
+                // Add a border to the picture
+                $('.profile-pic').css('border', '5px solid #000');
+                setTimeout(function() {
+                    $('.profile-pic').css('border', '');
+                }, 1500);
+            });
+        });
+    </script>
 </body>
 </html>
