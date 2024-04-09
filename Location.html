@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Your Location - ToysRNotUs</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="container">
+  
+  <div class="jumbotron text-center">
+    <h1>Your Location</h1>
+    <h3>Find out your current latitude and longitude</h3>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-12" id="location">
+      <p>Latitude: <span id="latitude"></span></p>
+      <p>Longitude: <span id="longitude"></span></p>
+    </div>
+  </div>
+
+  <div id="map" style="height: 400px; width: 100%;"></div>
+
+  <script>
+    var map;
+
+    function initMap(lat, lng) {
+      var myLatLng = {lat: lat, lng: lng};
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 8
+      });
+
+      new google.maps.Marker({
+        position: myLatLng,
+        map: map
+      });
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        document.getElementById("latitude").innerHTML = position.coords.latitude;
+        document.getElementById("longitude").innerHTML = position.coords.longitude;
+        initMap(position.coords.latitude, position.coords.longitude);
+      });
+    } else { 
+      document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
+</body>
+
+</html>
