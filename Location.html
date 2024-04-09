@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Your Location - ToysRNotUs</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="container">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">ABC Toys</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="hw3index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Products.html">Our Toys</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="Location.html">Your Location</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Extra.html">WURFL Capabilities</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="jumbotron text-center mt-5">
+    <h1>Your Location</h1>
+    <h3>Find out your current latitude and longitude</h3>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-12" id="location">
+      <p>Latitude: <span id="latitude"></span></p>
+      <p>Longitude: <span id="longitude"></span></p>
+    </div>
+  </div>
+
+  <div id="map" style="height: 400px; width: 100%;"></div>
+
+  <script>
+    var map;
+
+    function initMap(lat, lng) {
+      var myLatLng = {lat: lat, lng: lng};
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 8
+      });
+
+      new google.maps.Marker({
+        position: myLatLng,
+        map: map
+      });
+    }
+  </script>
+
+</body>
+</html>
