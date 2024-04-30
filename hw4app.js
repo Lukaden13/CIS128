@@ -1,7 +1,14 @@
 function applyBackground() {
     var background = document.getElementById("background-select").value;
-    document.body.style.backgroundImage = `url('images/${background}.jpg')`;
+    var imagePath = '';
+    if(background === 'lightblue') {
+        imagePath = 'images/lions.jpg';
+    } else if(background === 'lightgold') {
+        imagePath = 'images/lionswidth400.jpg';
+    }
+    document.body.style.backgroundImage = `url('${imagePath}')`;
 }
+
 
 function updateName() {
     const name = document.getElementById("username").value;
