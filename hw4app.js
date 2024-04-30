@@ -4,11 +4,10 @@ function applyBackground() {
     if(background === 'lightblue') {
         imagePath = 'images/lions.jpg';
     } else if(background === 'lightgold') {
-        imagePath = 'images/lionswidth400.jpg';
+        imagePath = 'images/lionswidth400.jpg'; 
     }
     document.body.style.backgroundImage = `url('${imagePath}')`;
 }
-
 
 function updateName() {
     const name = document.getElementById("username").value;
