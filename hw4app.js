@@ -1,14 +1,7 @@
 function applyBackground() {
     var background = document.getElementById("background-select").value;
-    var imagePath = "";
-    if (background === "blue-background") {
-        imagePath = "images/lions.jpg";
-    } else if (background === "gold-background") {
-        imagePath = "images/lionswidth400.jpg";
-    }
-    document.body.style.backgroundImage = `url('${imagePath}')`;
+    document.body.style.backgroundImage = `url('images/${background}.jpg')`;
 }
-
 
 function updateName() {
     const name = document.getElementById("username").value;
