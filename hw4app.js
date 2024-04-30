@@ -2,9 +2,9 @@ function applyBackground() {
     var background = document.getElementById("background-select").value;
     var imagePath = "";
     if (background === "blue-background") {
-        imagePath = "images/light-blue.jpg";
+        imagePath = "images/lions.jpg";
     } else if (background === "gold-background") {
-        imagePath = "images/light-gold.jpg";
+        imagePath = "images/lionswidth400.jpg";
     }
     document.body.style.backgroundImage = `url('${imagePath}')`;
 }
