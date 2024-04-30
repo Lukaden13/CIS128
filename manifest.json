@@ -1,0 +1,21 @@
+{
+    "short_name": "Simple PWA",
+    "name": "Simple Progressive Web Application",
+    "icons": [
+        {
+            "src": "images/lions.jpg"
+            "sizes": "192x192",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/lionswidth400.jpg"
+            "sizes": "512x512",
+            "type": "image/jpeg"
+        }
+    ],
+    "start_url": "hw4index.html",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": ".",
+    "theme_color": "#FFFFFF"
+}

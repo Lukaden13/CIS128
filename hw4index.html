@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="hw4style.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Simple PWA Example</title>
+</head>
+<body>
+    <header>
+        <h1>Understanding Progressive Web Apps</h1>
+    </header>
+    <main>
+        <p>Progressive Web Apps (PWAs) are web applications that use modern web capabilities to deliver an app-like experience to users.</p>
+        <p>PWAs are intended to work on any platform that uses a standards-compliant browser.</p>
+        
+        <label for="background-select">Choose Background:</label>
+        <select id="background-select">
+            <option value="lions">Light Blue (Lions)</option>
+            <option value="lionswidth400">Light Gold (Lions Width 400)</option>
+        </select>
+        <button onclick="applyBackground()">Apply Background</button>
+        
+        <!-- Extra Credit -->
+        <label for="username">Enter Your Name:</label>
+        <input type="text" id="username" oninput="updateName()">
+        <p id="user-name-display">Welcome, <span id="name-placeholder">Guest</span>!</p>
+    </main>
+    <script src="hw4app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
