@@ -1,15 +1,18 @@
-function applyBackground() {
-    var background = document.getElementById("background-select").value;
-    document.body.style.backgroundImage = `url('images/${background}.jpg')`;
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: white; /* Default background */
+    background-size: cover; /* Ensure the background covers the body */
+    background-position: center; /* Center the background image */
 }
 
-function updateName() {
-    const name = document.getElementById("username").value;
-    localStorage.setItem("name", name);
-    document.getElementById("name-placeholder").textContent = name || "Guest";
+header h1 {
+    color: navy;
+    text-align: center;
 }
 
-window.onload = function() {
-    const storedName = localStorage.getItem("name");
-    document.getElementById("name-placeholder").textContent = storedName || "Guest";
-};
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Larger font size for readability on small devices */
+    }
+}
