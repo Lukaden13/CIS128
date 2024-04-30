@@ -3,14 +3,14 @@
     "name": "Simple Progressive Web Application",
     "icons": [
         {
-            "src": "images/lions.jpg"
+            "src": "images/icon-192x192.png",
             "sizes": "192x192",
-            "type": "image/jpeg"
+            "type": "image/png"
         },
         {
-            "src": "images/lionswidth400.jpg"
+            "src": "images/icon-512x512.png",
             "sizes": "512x512",
-            "type": "image/jpeg"
+            "type": "image/png"
         }
     ],
     "start_url": "hw4index.html",
