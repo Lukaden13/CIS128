@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     padding: 20px;
     background-color: white; /* Default background */
-    background-size: cover; /* Ensure the background covers the body */
+    background-size: cover; /* Cover the entire body */
+    background-repeat: no-repeat; /* Do not repeat the background */
     background-position: center; /* Center the background image */
 }
 
