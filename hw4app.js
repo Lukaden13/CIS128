@@ -1,13 +1,15 @@
 function applyBackground() {
     var background = document.getElementById("background-select").value;
-    var imagePath = '';
-    if(background === 'lightblue') {
-        imagePath = 'images/lions.jpg';
-    } else if(background === 'lightgold') {
-        imagePath = 'images/lionswidth400.jpg'; 
+    switch (background) {
+        case "lightblue":
+            document.body.style.backgroundImage = "url('images/lions.jpg')";
+            break;
+        case "lightgold":
+            document.body.style.backgroundImage = "url('images/lionswidth400.jpg')";
+            break;
+        default:
+            document.body.style.backgroundImage = "none";  // No background image
     }
-    document.body.style.backgroundImage = `url('${imagePath}')`;
-}
 
 function updateName() {
     const name = document.getElementById("username").value;
