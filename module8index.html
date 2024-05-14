@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="module8style.css">
+    <link rel="manifest" href="module8manifest.json"> <!-- Link to the new manifest file -->
+    <title>Hybrid Platform Comparison</title>
+</head>
+<body>
+    <header>
+        <h1>Comparison of Hybrid Development Platforms</h1>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Understanding the different hybrid development platforms helps in choosing the right tool for project needs.</p>
+        </section>
+        <section id="comparison">
+            <h2>Platform Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>PhoneGap/Cordova</th>
+                        <th>Flutter</th>
+                        <th>React Native</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Language</td>
+                        <td>HTML, CSS, JavaScript</td>
+                        <td>Dart</td>
+                        <td>JavaScript, JSX</td>
+                    </tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td>Moderate</td>
+                        <td>High</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Development Speed</td>
+                        <td>Fast</td>
+                        <td>Moderate</td>
+                        <td>Fast</td>
+                    </tr>
+                    <tr>
+                        <td>Community Support</td>
+                        <td>Strong</td>
+                        <td>Growing</td>
+                        <td>Strong</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Based on the comparison, React Native appears to be the best choice for creating a reservation-like app for both iOS and Android due to its high performance, fast development speed, and strong community support.</p>
+        </section>
+        <footer>
+            <p>Report by [Your Name]. References: Adobe's PhoneGap update, Google's Flutter, React Native's official documentation.</p>
+        </footer>
+    </main>
+    <script>
+        // Check if service workers are supported
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('module8service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
